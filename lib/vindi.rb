@@ -1,0 +1,2 @@
+require "vindi/version"
+
