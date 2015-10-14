@@ -1,4 +1,5 @@
 require "vindi/version"
+require 'vindi/request'
 
 module Vindi
   module Configuration
