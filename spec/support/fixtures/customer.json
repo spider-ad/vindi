@@ -1,0 +1,22 @@
+{
+    "id": 128008,
+    "name": "Heisenberg",
+    "email": "hein@email.com",
+    "registry_code": null,
+    "code": null,
+    "notes": null,
+    "status": "inactive",
+    "created_at": "2015-10-15T12:33:50.000-03:00",
+    "updated_at": "2015-10-15T12:33:50.000-03:00",
+    "metadata": {},
+    "address": {
+      "street": null,
+      "number": null,
+      "additional_details": null,
+      "zipcode": null,
+      "neighborhood": null,
+      "city": "Sao Paulo",
+      "state": "SP",
+      "country": "BR"
+    }
+}

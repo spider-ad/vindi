@@ -10,5 +10,10 @@ module Vindi
       end
     end
 
+    def self.create(params = {})
+      resp = Request.new(:post, 'customers', params).perform
+      self.new(resp)
+    end
+
   end
 end
