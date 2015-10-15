@@ -2,24 +2,20 @@ require "spec_helper"
 
 module Vindi
   describe Request do
-
-    let(:path)           { '/customers' }
-    let(:request_method) { :get        }
-    let(:default_params) do
-      { query: {format: "json"} }
-    end
+    let(:path) { 'customers' }
 
     subject { described_class.new(request_method, path) }
 
 
     describe "#perfom" do
       let(:endpoint) do
-        "https://app.vindi.com.br/api/v1/customers"
+        "https://app.vindi.com.br/api/v1/customers.json"
       end
 
       context "given a successful get request to customers" do
-        let(:http_response) do
-          double("response", code: 200)
+        let(:request_method) { :get }
+        let(:default_params) do
+          { query: { } }
         end
 
         it "receive the get method with the default params" do
@@ -30,14 +26,33 @@ module Vindi
 
       end
 
+      context "given a successful create customers" do
+        let(:request_method) { :post }
+        let(:default_params) do
+          { body: { } }
+        end
+
+        it "receive the get method with the default params" do
+          expect(described_class).to receive(:post)
+            .with(endpoint, default_params).once
+          subject.perform
+        end
+
+      end
+
     end
 
-    describe "#options" do
+    describe "#uri" do
+      let(:endpoint) do
+        "https://app.vindi.com.br/api/v1/discounts.json"
+      end
 
-      context "given the format isnt send as a param" do
+      context "given a resource name" do
 
-        it "returns the default json format" do
-          expect(subject.options[:format]).to eql("json")
+        subject { described_class.new(:get, 'discounts') }
+
+        it "returns the api path to that resource json" do
+          expect(subject.uri.to_s).to be_eql endpoint
         end
       end
 
