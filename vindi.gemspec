@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('rake', '~> 10.4.2')
   spec.add_development_dependency('rspec', '~> 3.3.0')
   spec.add_development_dependency('pry', '~> 0.10.2')
+  spec.add_development_dependency('yajl-ruby', '~> 1.2.1')
   spec.add_dependency('httparty', '~> 0.13.7')
   spec.add_dependency('addressable', '~> 2.3.8')
   spec.add_dependency('hashie', '~> 3.4.1')
