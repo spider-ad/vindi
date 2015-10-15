@@ -1,0 +1,26 @@
+{
+  "customers": [
+    {
+      "id": 127859,
+      "name": "Joana Souza",
+      "email": "joanasouza@example.com",
+      "registry_code": "",
+      "code": "",
+      "notes": "",
+      "status": "inactive",
+      "created_at": "2015-10-15T12:05:27.000-03:00",
+      "updated_at": "2015-10-15T12:05:27.000-03:00",
+      "metadata": {},
+      "address": {
+        "street": "Avenida Paulista",
+        "number": "701",
+        "additional_details": "CJ 33",
+        "zipcode": "01311300",
+        "neighborhood": "Bela Vista",
+        "city": "São Paulo",
+        "state": "SP",
+        "country": "BR"
+      }
+    }
+  ]
+}
