@@ -4,31 +4,39 @@ module Vindi
   class Customer < ::Hashie::Mash
 
     def self.all(params = {})
-      resp = Request.new(:get, 'customers', params).perform
-      resp['customers'].map do |element|
+      resp = Request.new(:get, normalize_resource_name, params).perform
+      resp[normalize_resource_name].map do |element|
         self.new(element)
       end
     end
 
     def self.create(params = {})
-      resp = Request.new(:post, 'customers', params).perform
+      resp = Request.new(:post, normalize_resource_name, params).perform
       self.new(resp)
     end
 
     def self.delete(params = {})
-      resp = Request.new(:delete, "customers/#{params[:id]}", params).perform
+      resp = Request.new(:delete, "#{normalize_resource_name}/#{params[:id]}", params).perform
       self.new(resp)
     end
 
     def self.update(params = {})
-      resp = Request.new(:put, "customers/#{params[:id]}", params).perform
+      resp = Request.new(:put, "#{normalize_resource_name}/#{params[:id]}", params).perform
       self.new(resp)
     end
 
     def self.find(params = {})
-      resp = Request.new(:get, "customers/#{params[:id]}", params).perform
+      resp = Request.new(:get, "#{normalize_resource_name}/#{params[:id]}", params).perform
       self.new(resp)
+    end
+
+   protected
+
+    # @return [String] returns the rousce class name pluralized
+    def self.normalize_resource_name
+      self.name.demodulize.underscore.pluralize
     end
 
   end
 end
+
