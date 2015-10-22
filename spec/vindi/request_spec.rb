@@ -3,8 +3,11 @@ require "spec_helper"
 module Vindi
   describe Request do
     let(:path) { 'customers' }
+    let(:options) do
+      {}
+    end
 
-    subject { described_class.new(request_method, path) }
+    subject { described_class.new(request_method, path, options) }
 
 
     describe "#perfom" do
@@ -14,13 +17,10 @@ module Vindi
 
       context "given a successful get request to customers" do
         let(:request_method) { :get }
-        let(:default_params) do
-          { query: { } }
-        end
 
         it "receive the get method with the default params" do
           expect(described_class).to receive(:get)
-            .with(endpoint, default_params).once
+            .with(endpoint, query: {}).once
           subject.perform
         end
 
@@ -28,13 +28,31 @@ module Vindi
 
       context "given a successful create customers" do
         let(:request_method) { :post }
-        let(:default_params) do
-          { body: { } }
+        let(:options) do
+          { name: "Bboy", country: "Brazil", email: "bboy@email.com" }
         end
 
-        it "receive the get method with the default params" do
+        it "receive the post method with the default params" do
           expect(described_class).to receive(:post)
-            .with(endpoint, default_params).once
+            .with(endpoint, body: options).once
+          subject.perform
+        end
+
+      end
+
+      context "given a successful request to update a resource" do
+        let(:path) { 'customers/3' }
+        let(:endpoint) do
+          "https://app.vindi.com.br/api/v1/customers/3.json"
+        end
+        let(:request_method) { :put }
+        let(:options) do
+          { id: 3, email: "bboy@email.com" }
+        end
+
+        it "receive the put method with the default params" do
+          expect(described_class).to receive(:put)
+            .with(endpoint, body: options).once
           subject.perform
         end
 

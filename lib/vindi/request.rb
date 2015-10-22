@@ -9,7 +9,8 @@ module Vindi
 
     OPTIONS_KEY = {
       get:  :query,
-      post: :body
+      post: :body,
+      put:  :body
     }
 
     # @param [Symbol] http verb
