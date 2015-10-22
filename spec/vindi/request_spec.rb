@@ -58,6 +58,24 @@ module Vindi
 
       end
 
+      context "given a successful request to get a single resource" do
+        let(:path) { 'customers/1' }
+        let(:endpoint) do
+          "https://app.vindi.com.br/api/v1/customers/1.json"
+        end
+        let(:request_method) { :get }
+        let(:options) do
+          { id: 1 }
+        end
+
+        it "receive the get method with the default params" do
+          expect(described_class).to receive(:get)
+            .with(endpoint, query: options).once
+          subject.perform
+        end
+
+      end
+
     end
 
     describe "#uri" do

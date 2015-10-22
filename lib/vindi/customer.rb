@@ -24,5 +24,11 @@ module Vindi
       resp = Request.new(:put, "customers/#{params[:id]}", params).perform
       self.new(resp)
     end
+
+    def self.find(params = {})
+      resp = Request.new(:get, "customers/#{params[:id]}", params).perform
+      self.new(resp)
+    end
+
   end
 end

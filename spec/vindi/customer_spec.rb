@@ -96,5 +96,25 @@ module Vindi
       end
     end
 
+    describe ".find" do
+
+      context "given a successful request" do
+        let(:response) { parsed_response("customer.json") }
+
+        before do
+          allow_any_instance_of(Request).to receive(:perform).and_return(response)
+        end
+
+        let(:id) { 128008 }
+
+        subject { described_class.find(id: id) }
+
+        it { expect(subject).to be_a(Customer) }
+
+        it { expect(subject.id).to be_eql id }
+
+      end
+    end
+
   end
 end
