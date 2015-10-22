@@ -73,5 +73,28 @@ module Vindi
       end
     end
 
+    describe ".update" do
+
+      context "given a successful request" do
+        let(:response) { parsed_response("customer.json") }
+
+        before do
+          response['name'] = name
+          allow_any_instance_of(Request).to receive(:perform).and_return(response)
+        end
+
+        let(:id) { 128008 }
+        let(:name) { 'Jonny B.' }
+
+        subject { described_class.update(id: id, name: name) }
+
+        it { expect(subject).to be_a(Customer) }
+
+        it { expect(subject.id).to be_eql id }
+
+        it { expect(subject.name).to be_eql name }
+      end
+    end
+
   end
 end

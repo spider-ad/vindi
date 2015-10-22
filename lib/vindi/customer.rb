@@ -20,5 +20,9 @@ module Vindi
       self.new(resp)
     end
 
+    def self.update(params = {})
+      resp = Request.new(:put, "customers/#{params[:id]}", params).perform
+      self.new(resp)
+    end
   end
 end
