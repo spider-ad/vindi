@@ -7,8 +7,8 @@ module Vindi
 
     # @param path [String] uri resource
     # @param format [String, Symbol] the format (json or xml)
-    def initialize(resource, format)
-      resource = set_format(resource, format)
+    def initialize(resource, identifier = nil, format)
+      resource = set_format(resource, identifier, format)
       @uri = parse(BASE).join(resource)
     end
 
@@ -20,8 +20,9 @@ module Vindi
 
     protected
 
-      def set_format(resource, format)
-         resource += ".#{format}"
+      def set_format(resource, identifier, format)
+         return resource += ".#{format}" unless identifier
+         resource += "/#{identifier}.#{format}"
       end
 
       def parse(path)

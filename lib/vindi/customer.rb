@@ -16,17 +16,17 @@ module Vindi
     end
 
     def self.delete(params = {})
-      resp = Request.new(:delete, "#{normalize_resource_name}/#{params[:id]}", params).perform
+      resp = Request.new(:delete, normalize_resource_name, params).perform
       self.new(resp)
     end
 
     def self.update(params = {})
-      resp = Request.new(:put, "#{normalize_resource_name}/#{params[:id]}", params).perform
+      resp = Request.new(:put, normalize_resource_name, params).perform
       self.new(resp)
     end
 
     def self.find(params = {})
-      resp = Request.new(:get, "#{normalize_resource_name}/#{params[:id]}", params).perform
+      resp = Request.new(:get, normalize_resource_name, params).perform
       self.new(resp)
     end
 

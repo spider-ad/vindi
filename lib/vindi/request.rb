@@ -19,7 +19,7 @@ module Vindi
     def initialize(request_method, path, options = {})
       set_basic_auth
       @options        = options
-      @uri            = URI.new(path, :json)
+      @uri            = URI.new(path, options[:id], :json)
       @path           = uri.path
       @request_method = request_method
     end

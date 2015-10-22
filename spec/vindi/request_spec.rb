@@ -41,7 +41,6 @@ module Vindi
       end
 
       context "given a successful request to update a resource" do
-        let(:path) { 'customers/3' }
         let(:endpoint) do
           "https://app.vindi.com.br/api/v1/customers/3.json"
         end
@@ -59,7 +58,6 @@ module Vindi
       end
 
       context "given a successful request to get a single resource" do
-        let(:path) { 'customers/1' }
         let(:endpoint) do
           "https://app.vindi.com.br/api/v1/customers/1.json"
         end
