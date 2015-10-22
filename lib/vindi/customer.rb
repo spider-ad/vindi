@@ -15,5 +15,10 @@ module Vindi
       self.new(resp)
     end
 
+    def self.delete(params = {})
+      resp = Request.new(:delete, "customers/#{params[:id]}", params).perform
+      self.new(resp)
+    end
+
   end
 end

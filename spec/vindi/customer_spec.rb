@@ -51,5 +51,27 @@ module Vindi
       end
     end
 
+    describe ".delete" do
+
+      context "given a successful request" do
+        let(:response) { parsed_response("customer.json") }
+
+        before do
+          response['status'] = 'archived'
+          allow_any_instance_of(Request).to receive(:perform).and_return(response)
+        end
+
+        let(:id) { 128008 }
+
+        subject { described_class.delete(id: id) }
+
+        it { expect(subject).to be_a(Customer) }
+
+        it { expect(subject.id).to be_eql id }
+
+        it { expect(subject.status).to be_eql 'archived' }
+      end
+    end
+
   end
 end
