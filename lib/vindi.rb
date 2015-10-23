@@ -1,6 +1,7 @@
 require "vindi/version"
 require "vindi/uri"
 require 'vindi/request'
+require 'vindi/base'
 require 'vindi/customer'
 require 'active_support/inflector'
 

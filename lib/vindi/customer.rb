@@ -1,7 +1,5 @@
-require "hashie"
-
 module Vindi
-  class Customer < ::Hashie::Mash
+  class Customer < Base
 
     def self.all(params = {})
       resp = Request.new(:get, normalize_resource_name, params).perform
@@ -30,13 +28,5 @@ module Vindi
       self.new(resp)
     end
 
-   protected
-
-    # @return [String] returns the rousce class name pluralized
-    def self.normalize_resource_name
-      self.name.demodulize.underscore.pluralize
-    end
-
   end
 end
-
