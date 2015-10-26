@@ -1,6 +1,11 @@
 require "vindi/version"
 require "vindi/uri"
 require 'vindi/request'
+require 'vindi/api/list'
+require 'vindi/api/create'
+require 'vindi/api/delete'
+require 'vindi/api/update'
+require 'vindi/api/get'
 require 'vindi/base'
 require 'vindi/customer'
 require 'active_support/inflector'
