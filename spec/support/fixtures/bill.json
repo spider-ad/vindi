@@ -1,0 +1,89 @@
+{
+  "bill": {
+    "id": 236301,
+    "code": null,
+    "amount": "1000.0",
+    "installments": 1,
+    "status": "pending",
+    "seen_at": null,
+    "billing_at": null,
+    "url": "https://app.vindi.com.br/customer/bills/236301?token=ff519662-047a-4d57-97b4-0a5ef5166ecc",
+    "created_at": "2015-10-27T17:23:09.000-02:00",
+    "updated_at": "2015-10-27T17:23:09.000-02:00",
+    "bill_items": [
+      {
+        "id": 322150,
+        "amount": "1000.0",
+        "quantity": null,
+        "pricing_range_id": null,
+        "description": "Glass Master R$ 1000",
+        "pricing_schema": null,
+        "product": {
+          "id": 8641,
+          "name": "Glass",
+          "code": "01"
+        },
+        "product_item": null,
+        "discount": null
+      }
+    ],
+    "charges": [
+      {
+        "id": 218285,
+        "amount": "1000.0",
+        "status": "pending",
+        "due_at": "2015-10-27T23:59:59.000-02:00",
+        "paid_at": null,
+        "installments": 1,
+        "attempt_count": 1,
+        "next_attempt": "2015-10-30T00:00:00.000-02:00",
+        "print_url": null,
+        "created_at": "2015-10-27T17:23:09.000-02:00",
+        "updated_at": "2015-10-27T17:23:09.000-02:00",
+        "last_transaction": {
+          "id": 304027,
+          "transaction_type": "charge",
+          "status": "rejected",
+          "gateway_message": "Transacao rejeitada em modo teste",
+          "gateway_response_code": "51",
+          "gateway_authorization": "D349FFF43CC0D7F9BC9A45E894080060",
+          "gateway_transaction_id": "681c9257-0a9f-4130-9842-cdf746e9fb30",
+          "created_at": "2015-10-27T17:23:09.000-02:00",
+          "payment_profile": {
+            "id": 140877,
+            "holder_name": "HEINSBERG SILVA JUNIOR",
+            "registry_code": null,
+            "bank_branch": null,
+            "bank_account": null,
+            "card_expiration": "2018-12-31T23:59:59.000-02:00",
+            "card_number_first_six": "516745",
+            "card_number_last_four": "1773",
+            "token": "3ee418bb-b545-42f0-b743-4f7467e78051",
+            "created_at": "2015-10-27T15:15:47.000-02:00",
+            "payment_company": {
+              "id": 1,
+              "name": "MasterCard",
+              "code": "mastercard"
+            }
+          }
+        },
+        "payment_method": {
+          "id": 3510,
+          "public_name": "Cartão de crédito",
+          "name": "Cartão de crédito",
+          "code": "credit_card",
+          "type": "PaymentMethod::CreditCard"
+        }
+      }
+    ],
+    "customer": {
+      "id": 128008,
+      "name": "Heisenberg Jr.",
+      "email": "hein@spire.ad",
+      "code": null
+    },
+    "period": null,
+    "subscription": null,
+    "metadata": {}
+  }
+}

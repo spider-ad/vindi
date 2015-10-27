@@ -11,6 +11,7 @@ require 'vindi/customer'
 require 'vindi/payment_profile'
 require 'vindi/product'
 require 'vindi/payment_method'
+require 'vindi/bill'
 require 'active_support/inflector'
 
 
