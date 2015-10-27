@@ -6,9 +6,19 @@ module Vindi
 
    protected
 
-    # @return [String] returns the rousce class name pluralized
+    # @return [String] returns the resource class name pluralized
     def self.normalize_resource_name
-      self.name.demodulize.underscore.pluralize
+      resource_name.pluralize
+    end
+
+    # @return [String] returns the resource class name singular
+    def self.resource_name
+      self.name.demodulize.underscore
+    end
+
+    # @return [False] checks if the resoruce response key parser
+    def self.reponse_has_key?
+      false
     end
 
   end

@@ -1,0 +1,70 @@
+{
+  "payment_profiles": [
+    {
+      "id": 140875,
+      "status": "inactive",
+      "holder_name": "HEINSBERG SILVA JUNIOR",
+      "registry_code": null,
+      "bank_branch": null,
+      "bank_account": null,
+      "card_expiration": "2018-12-31T23:59:59.000-02:00",
+      "card_number_first_six": "516745",
+      "card_number_last_four": "1773",
+      "token": "715a5664-807d-48d5-bfa4-bcde3717e1da",
+      "type": "PaymentProfile::CreditCard",
+      "created_at": "2015-10-27T15:15:05.000-02:00",
+      "updated_at": "2015-10-27T15:15:47.000-02:00",
+      "payment_company": {
+        "id": 1,
+        "name": "MasterCard",
+        "code": "mastercard"
+      },
+      "payment_method": {
+        "id": 3510,
+        "public_name": "Cartão de crédito",
+        "name": "Cartão de crédito",
+        "code": "credit_card",
+        "type": "PaymentMethod::CreditCard"
+      },
+      "customer": {
+        "id": 128008,
+        "name": "Heisenberg Jr.",
+        "email": "hein@spire.ad",
+        "code": null
+      }
+    },
+    {
+      "id": 140880,
+      "status": "active",
+      "holder_name": "JOSE DA SILVA",
+      "registry_code": null,
+      "bank_branch": null,
+      "bank_account": null,
+      "card_expiration": "2018-12-31T23:59:59.000-02:00",
+      "card_number_first_six": "516745",
+      "card_number_last_four": "1773",
+      "token": "18b56db6-87cf-4982-9bbb-5abe027a57ff",
+      "type": "PaymentProfile::CreditCard",
+      "created_at": "2015-10-27T15:18:17.000-02:00",
+      "updated_at": "2015-10-27T15:18:17.000-02:00",
+      "payment_company": {
+        "id": 1,
+        "name": "MasterCard",
+        "code": "mastercard"
+      },
+      "payment_method": {
+        "id": 3510,
+        "public_name": "Cartão de crédito",
+        "name": "Cartão de crédito",
+        "code": "credit_card",
+        "type": "PaymentMethod::CreditCard"
+      },
+      "customer": {
+        "id": 127859,
+        "name": "Joana Souza",
+        "email": "joanasouza@example.com",
+        "code": ""
+      }
+    }
+  ]
+}
