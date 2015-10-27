@@ -1,0 +1,68 @@
+{
+  "payment_methods": [
+    {
+      "id": 3510,
+      "public_name": "Cartão de crédito",
+      "name": "Cartão de crédito",
+      "code": "credit_card",
+      "type": "PaymentMethod::CreditCard",
+      "status": "active",
+      "settings": {},
+      "set_subscription_on_success": "set_without_authorization",
+      "allow_as_alternative": true,
+      "payment_companies": [
+        {
+          "id": 2,
+          "name": "Visa",
+          "code": "visa"
+        },
+        {
+          "id": 1,
+          "name": "MasterCard",
+          "code": "mastercard"
+        }
+      ],
+      "maximum_attempts": 5,
+      "created_at": "2015-09-11T10:21:59.000-03:00",
+      "updated_at": "2015-09-11T10:21:59.000-03:00"
+    },
+    {
+      "id": 3511,
+      "public_name": "Boleto bancário",
+      "name": "Boleto bancário",
+      "code": "bank_slip",
+      "type": "PaymentMethod::BankSlip",
+      "status": "inactive",
+      "settings": {
+        "payment_company_id": 5,
+        "bank_slip_type": "175",
+        "branch": "1111",
+        "account": "11111-1",
+        "format": "cnab400",
+        "due_days": 3,
+        "dynamic": true
+      },
+      "set_subscription_on_success": "do_not_set",
+      "allow_as_alternative": false,
+      "payment_companies": [],
+      "maximum_attempts": null,
+      "created_at": "2015-09-11T10:21:59.000-03:00",
+      "updated_at": "2015-09-11T10:21:59.000-03:00"
+    },
+    {
+      "id": 3512,
+      "public_name": "Dinheiro",
+      "name": "Dinheiro",
+      "code": "cash",
+      "type": "PaymentMethod::Cash",
+      "status": "inactive",
+      "settings": {},
+      "set_subscription_on_success": "do_not_set",
+      "allow_as_alternative": false,
+      "payment_companies": [],
+      "maximum_attempts": null,
+      "created_at": "2015-09-11T10:21:59.000-03:00",
+      "updated_at": "2015-09-11T10:21:59.000-03:00"
+    }
+  ]
+}

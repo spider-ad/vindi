@@ -10,6 +10,7 @@ require 'vindi/base'
 require 'vindi/customer'
 require 'vindi/payment_profile'
 require 'vindi/product'
+require 'vindi/payment_method'
 require 'active_support/inflector'
 
 
