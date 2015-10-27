@@ -1,0 +1,22 @@
+{
+  "product": {
+    "id": 8641,
+    "name": "Glass",
+    "code": "01",
+    "unit": "",
+    "status": "active",
+    "description": "",
+    "created_at": "2015-10-27T16:53:17.000-02:00",
+    "updated_at": "2015-10-27T16:53:17.000-02:00",
+    "pricing_schema": {
+      "id": 37955,
+      "short_format": "R$ 1,00",
+      "price": "1.0",
+      "minimum_price": null,
+      "schema_type": "flat",
+      "pricing_ranges": [],
+      "created_at": "2015-10-27T16:53:17.000-02:00"
+    },
+    "metadata": {}
+  }
+}

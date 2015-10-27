@@ -6,6 +6,11 @@ module Vindi
 
    protected
 
+    def self.parse(response)
+      return self.new(response) unless reponse_has_key?
+      self.new(response[key_parser])
+    end
+
     # @return [String] returns the resource class name pluralized
     def self.normalize_resource_name
       resource_name.pluralize

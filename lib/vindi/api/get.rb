@@ -5,7 +5,7 @@ module Vindi
       module ClassMethods
         def get(params = {})
           resp = Request.new(:get, normalize_resource_name, params).perform
-          self.new(resp)
+          parse(resp)
         end
 
         alias :find :get
