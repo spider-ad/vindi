@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency('httparty', '~> 0.13.7')
   spec.add_dependency('addressable', '~> 2.3.8')
   spec.add_dependency('hashie', '~> 3.4.1')
-  spec.add_dependency('activesupport', '~> 4.2', '>= 4.2.4')
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
