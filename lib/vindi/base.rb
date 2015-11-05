@@ -11,6 +11,10 @@ module Vindi
       self.new(response[key_parser])
     end
 
+    def self.key_parser
+      resource_name
+    end
+
     # @return [String] returns the resource class name pluralized
     def self.normalize_resource_name
       Normalizer.new(resource_name).pluralize.to_s
@@ -23,7 +27,7 @@ module Vindi
 
     # @return [False] checks if the resoruce response key parser
     def self.reponse_has_key?
-      false
+      true
     end
 
   end
