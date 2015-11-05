@@ -57,7 +57,7 @@ module Vindi
         let(:response) { parsed_response("customer.json") }
 
         before do
-          response['status'] = 'archived'
+          response['customer']['status'] = 'archived'
           allow_any_instance_of(Request).to receive(:perform).and_return(response)
         end
 
@@ -79,7 +79,7 @@ module Vindi
         let(:response) { parsed_response("customer.json") }
 
         before do
-          response['name'] = name
+          response['customer']['name'] = name
           allow_any_instance_of(Request).to receive(:perform).and_return(response)
         end
 

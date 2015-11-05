@@ -1,4 +1,5 @@
 {
+  "customer": {
     "id": 128008,
     "name": "Heisenberg",
     "email": "hein@email.com",
@@ -19,4 +20,5 @@
       "state": "SP",
       "country": "BR"
     }
+  }
 }

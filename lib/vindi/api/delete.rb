@@ -5,7 +5,7 @@ module Vindi
       module ClassMethods
         def delete(params = {})
           resp = Request.new(:delete, normalize_resource_name, params).perform
-          self.new(resp)
+          parse(resp)
         end
       end
 
