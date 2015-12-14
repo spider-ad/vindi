@@ -14,13 +14,14 @@ module Vindi
       let(:endpoint) do
         "https://app.vindi.com.br/api/v1/customers.json"
       end
+      let(:resp_double) { instance_double("response", code: 200, parsed_response: "") }
 
       context "given a successful get request to customers" do
         let(:request_method) { :get }
 
         it "receive the get method with the default params" do
           expect(described_class).to receive(:get)
-            .with(endpoint, query: {}).once
+            .with(endpoint, query: {}).once.and_return(resp_double)
           subject.perform
         end
 
@@ -34,7 +35,7 @@ module Vindi
 
         it "receive the post method with the default params" do
           expect(described_class).to receive(:post)
-            .with(endpoint, body: options).once
+            .with(endpoint, body: options).once.and_return(resp_double)
           subject.perform
         end
 
@@ -51,7 +52,7 @@ module Vindi
 
         it "receive the put method with the default params" do
           expect(described_class).to receive(:put)
-            .with(endpoint, body: options).once
+            .with(endpoint, body: options).once.and_return(resp_double)
           subject.perform
         end
 
@@ -68,7 +69,7 @@ module Vindi
 
         it "receive the get method with the default params" do
           expect(described_class).to receive(:get)
-            .with(endpoint, query: options).once
+            .with(endpoint, query: options).once.and_return(resp_double)
           subject.perform
         end
 

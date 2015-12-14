@@ -12,6 +12,7 @@ require 'vindi/payment_profile'
 require 'vindi/product'
 require 'vindi/payment_method'
 require 'vindi/bill'
+require 'vindi/response_validator'
 require 'vindi/error'
 require 'vindi/normalizer'
 
